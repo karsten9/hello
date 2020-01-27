@@ -1,7 +1,6 @@
 "use strict";
 
 // Inhalt des Scripts devicemotion.js:
-let maxi = -1;
 if (window.DeviceMotionEvent) {
     document.getElementById("dmeSupported").innerText = "OK - Device Motion wird unterstützt!";
     window.addEventListener('devicemotion', function(event) {
@@ -11,6 +10,7 @@ if (window.DeviceMotionEvent) {
     if (event.acceleration.z > maxi) {
     maxi = event.acceleration.z;
     document.getElementById("meinMax").innerHTML = 'max z: ' + maxi;
+        let maxi = -1;
     }
     });
     } else {
